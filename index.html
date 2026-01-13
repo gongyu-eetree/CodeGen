@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board-to-Code Agent</title>
+    <style>
+      :root {
+        --bg-color: #ffffff;
+        --sidebar-bg: #ffffff;
+        --text-primary: #1b4332; /* Ink Green */
+        --text-secondary: #2d6a4f;
+        --accent-color: #1b4332;
+        --accent-hover: #081c15;
+        --border-color: #1b4332;
+        --code-bg: #f8fafc;
+      }
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-primary);
+        height: 100vh;
+        overflow: hidden;
+      }
+      #root {
+        height: 100%;
+      }
+      /* Custom Scrollbar for Wireframe Theme */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-color);
+        border-left: 1px solid var(--border-color);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1b4332; /* Ink Green thumb */
+        border: 1px solid #ffffff;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #081c15;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
